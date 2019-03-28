@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/interest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Interests"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"/>
+
+    <ListView
+        android:id="@+id/listview_interests"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/interest_title" />
+
+    <TextView
+        android:id="@+id/locations_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listview_interests"
+        android:text="Select Locations"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/listview_locations"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/locations_title" />
+
+
+    <TextView
+        android:id="@+id/travel_radius"
+        android:layout_below="@id/listview_locations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Enter Search Radius:      "
+        android:textSize = "20dp"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/enter_travelRadius"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listview_locations"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/travel_radius"
+        android:gravity="center"
+        android:hint="1.5"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/radius_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listview_locations"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@id/enter_travelRadius"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:text="miles" />
+
+    <Button
+        android:id="@+id/findMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listview_locations"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="Send"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
